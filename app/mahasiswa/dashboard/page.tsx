@@ -99,19 +99,18 @@ export default function DashboardPage() {
       <header className="border-b bg-background sticky top-0 z-50">
         <div className="container mx-auto px-4 h-16 flex items-center justify-between">
           <div className="flex items-center gap-6">
-            <Link href="/mahasiswa/dashboard" className="flex items-center gap-2">
-              <GraduationCap className="h-6 w-6 text-primary" />
-              <span className="font-bold text-xl">RMURA LMS</span>
-            </Link>
-
+           <div className="flex items-center gap-2 cursor-default select-none">
+                <GraduationCap className="h-6 w-6 text-primary" />
+                <span className="font-bold text-xl">RMURA LMS</span>
+              </div>
             <nav className="hidden md:flex items-center gap-4">
               <Link href="/mahasiswa/dashboard" className="text-sm font-medium text-primary">
-                Dashboard
+                Beranda
               </Link>
-              <Link href="/courses" className="text-sm font-medium hover:text-primary">
+              <Link href="/mahasiswa/coursesmhs" className="text-sm font-medium hover:text-primary">
                 Kursus Saya
               </Link>
-              <Link href="/career" className="text-sm font-medium hover:text-primary">
+              <Link href="/mahasiswa/careermhs" className="text-sm font-medium hover:text-primary">
                 Persiapan Karir
               </Link>
             </nav>

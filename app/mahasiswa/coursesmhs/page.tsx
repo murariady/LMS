@@ -96,29 +96,27 @@ export default function CoursesPage() {
       <header className="border-b bg-background sticky top-0 z-50">
         <div className="container mx-auto px-4 h-16 flex items-center justify-between">
           <div className="flex items-center gap-6">
-            <Link href="/" className="flex items-center gap-2">
-              <GraduationCap className="h-6 w-6 text-primary" />
-              <span className="font-bold text-xl text-white">
-                RMURA LMS
-              </span>
-            </Link>
+           <div className="flex items-center gap-2 cursor-default select-none">
+                <GraduationCap className="h-6 w-6 text-primary" />
+                <span className="font-bold text-xl">RMURA LMS</span>
+              </div>
 
             {/* NAVBAR TANPA SERTIFIKAT */}
             <nav className="hidden md:flex items-center gap-4">
               <Link
-                href="/dashboard"
+                href="/mahasiswa/dashboard"
                 className="text-sm font-medium text-white hover:text-primary"
               >
                 Beranda
               </Link>
               <Link
-                href="/courses"
+                href="/mahasiswa/coursesmhs"
                 className="text-sm font-medium text-primary"
               >
                 Kursus Saya
               </Link>
               <Link
-                href="/career"
+                href="/mahasiswa/careermhs"
                 className="text-sm font-medium text-white hover:text-primary"
               >
                 Persiapan Karir

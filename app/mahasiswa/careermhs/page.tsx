@@ -71,21 +71,21 @@ export default function CareerPage() {
               {/* NAVIGATION */}
               <nav className="hidden md:flex items-center gap-4">
                 <Link
-                  href="/dashboard"
+                  href="/mahasiswa/dashboard"
                   className="text-sm font-medium text-white hover:text-primary"
                 >
                   Beranda
                 </Link>
 
                 <Link
-                  href="/courses"
+                  href="/mahasiswa/coursesmhs"
                   className="text-sm font-medium text-white hover:text-primary"
                 >
                   Kursus Saya
                 </Link>
 
                 <Link
-                  href="/career"
+                  href="/mahasiswa/careermhs"
                   className="text-sm font-medium text-primary"
                 >
                   Persiapan Karir
@@ -94,7 +94,7 @@ export default function CareerPage() {
             </div>
 
             {/* KANAN */}
-            <Link href="/dashboard">
+            <Link href="/mahasiswa/dashboard">
               <Button>Dashboard</Button>
             </Link>
 

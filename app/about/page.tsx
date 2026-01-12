@@ -6,21 +6,21 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 export default function AboutPage() {
   return (
     <div className="min-h-screen flex flex-col">
-      {/* Header */}
-      <header className="border-b bg-background">
+         {/* Header */}
+      <header className="border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50">
         <div className="container mx-auto px-4 h-16 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2">
+          <div className="flex items-center gap-2">
             <GraduationCap className="h-6 w-6 text-primary" />
-            <span className="font-bold text-xl">RMURA LMS</span>
-          </Link>
+            <span className="font-bold text-xl text-white">RMURA LMS</span>
+          </div>
           <nav className="hidden md:flex items-center gap-6">
-            <Link href="/" className="text-sm font-medium hover:text-primary transition-colors">
+            <Link href="/" className="text-sm font-medium text-white hover:text-primary transition-colors">
               Beranda
             </Link>
-            <Link href="/courses" className="text-sm font-medium hover:text-primary transition-colors">
+            <Link href="/login" className="text-sm font-medium text-white hover:text-primary transition-colors">
               Kursus
             </Link>
-            <Link href="/career" className="text-sm font-medium hover:text-primary transition-colors">
+            <Link href="/login" className="text-sm font-medium text-white hover:text-primary transition-colors">
               Persiapan Karir
             </Link>
             <Link href="/about" className="text-sm font-medium text-primary">
@@ -34,42 +34,47 @@ export default function AboutPage() {
       </header>
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-b from-primary/5 to-transparent py-16 border-b">
+      <section className="bg-gradient-to-b from-primary/10 to-transparent py-16 border-b">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">Tentang CareerLearn LMS</h1>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Platform pembelajaran yang berfokus pada pengembangan skill dan persiapan karir untuk lulusan baru
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">
+            Tentang RMURA LMS
+          </h1>
+          <p className="text-lg text-gray-300 max-w-2xl mx-auto">
+            Platform pembelajaran yang berfokus pada pengembangan skill dan persiapan karir
+            untuk lulusan baru
           </p>
         </div>
       </section>
 
       {/* Main Content */}
       <main className="flex-1 container mx-auto px-4 py-16">
-        {/* Mission & Vision */}
+        {/* Vision & Mission */}
         <div className="max-w-4xl mx-auto mb-16">
           <div className="grid md:grid-cols-2 gap-8">
-            <Card>
+            <Card className="bg-white shadow">
               <CardHeader>
                 <Target className="h-10 w-10 text-primary mb-4" />
-                <CardTitle>Visi Kami</CardTitle>
+                <CardTitle className="text-gray-900">Visi Kami</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground">
-                  Menjadi platform pembelajaran terdepan yang menghubungkan pendidikan dengan dunia kerja, mempersiapkan
-                  lulusan baru untuk sukses dalam karir mereka.
+                <p className="text-gray-700">
+                  Menjadi platform pembelajaran terdepan yang menghubungkan pendidikan
+                  dengan dunia kerja, serta mempersiapkan lulusan baru untuk sukses dalam
+                  karir mereka.
                 </p>
               </CardContent>
             </Card>
 
-            <Card>
+            <Card className="bg-white shadow">
               <CardHeader>
                 <Heart className="h-10 w-10 text-primary mb-4" />
-                <CardTitle>Misi Kami</CardTitle>
+                <CardTitle className="text-gray-900">Misi Kami</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground">
-                  Menyediakan pembelajaran berkualitas dan program persiapan karir yang komprehensif untuk membantu
-                  lulusan baru mengembangkan skill yang dibutuhkan industri.
+                <p className="text-gray-700">
+                  Menyediakan pembelajaran berkualitas dan program persiapan karir yang
+                  komprehensif untuk membantu lulusan baru mengembangkan skill yang
+                  dibutuhkan industri.
                 </p>
               </CardContent>
             </Card>
@@ -78,66 +83,84 @@ export default function AboutPage() {
 
         {/* Why Choose Us */}
         <div className="max-w-4xl mx-auto mb-16">
-          <h2 className="text-3xl font-bold text-center mb-8">Mengapa Memilih Kami?</h2>
+          <h2 className="text-3xl font-bold text-center mb-8 text-white">
+            Mengapa Memilih Kami?
+          </h2>
           <div className="grid md:grid-cols-3 gap-6">
             <div className="text-center">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-4">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/20 rounded-full mb-4">
                 <Users className="h-8 w-8 text-primary" />
               </div>
-              <h3 className="font-semibold mb-2">Instruktur Berpengalaman</h3>
-              <p className="text-sm text-muted-foreground">
+              <h3 className="font-semibold mb-2 text-white">
+                Instruktur Berpengalaman
+              </h3>
+              <p className="text-sm text-gray-300">
                 Belajar dari praktisi industri yang berpengalaman di bidangnya
               </p>
             </div>
 
             <div className="text-center">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-4">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/20 rounded-full mb-4">
                 <Award className="h-8 w-8 text-primary" />
               </div>
-              <h3 className="font-semibold mb-2">Sertifikat Resmi</h3>
-              <p className="text-sm text-muted-foreground">
+              <h3 className="font-semibold mb-2 text-white">
+                Sertifikat Resmi
+              </h3>
+              <p className="text-sm text-gray-300">
                 Dapatkan sertifikat yang diakui oleh industri setelah menyelesaikan kursus
               </p>
             </div>
 
             <div className="text-center">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-4">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/20 rounded-full mb-4">
                 <GraduationCap className="h-8 w-8 text-primary" />
               </div>
-              <h3 className="font-semibold mb-2">Pembelajaran Fleksibel</h3>
-              <p className="text-sm text-muted-foreground">Belajar kapan saja, di mana saja sesuai dengan waktu Anda</p>
+              <h3 className="font-semibold mb-2 text-white">
+                Pembelajaran Fleksibel
+              </h3>
+              <p className="text-sm text-gray-300">
+                Belajar kapan saja dan di mana saja sesuai dengan waktu Anda
+              </p>
             </div>
           </div>
         </div>
 
         {/* Our Story */}
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-8">Cerita Kami</h2>
-          <div className="prose prose-lg max-w-none">
-            <p className="text-muted-foreground mb-4">
-              CareerLearn LMS didirikan dengan tujuan untuk mengatasi kesenjangan antara pendidikan formal dan kebutuhan
-              industri. Kami memahami bahwa lulusan baru sering menghadapi kesulitan dalam memasuki dunia kerja karena
-              kurangnya skill praktis dan persiapan karir yang memadai.
+          <h2 className="text-3xl font-bold text-center mb-8 text-white">
+            Cerita Kami
+          </h2>
+          <div className="space-y-4">
+            <p className="text-gray-300">
+              RMURA LMS didirikan dengan tujuan untuk mengatasi kesenjangan antara pendidikan
+              formal dan kebutuhan industri. Kami memahami bahwa lulusan baru sering
+              menghadapi kesulitan dalam memasuki dunia kerja karena kurangnya skill praktis
+              dan persiapan karir yang memadai.
             </p>
-            <p className="text-muted-foreground mb-4">
-              Platform kami menawarkan kombinasi unik antara pembelajaran teknis dan pengembangan soft skill, dilengkapi
-              dengan program persiapan karir yang komprehensif. Mulai dari pembuatan CV, persiapan interview, hingga
-              strategi job hunting.
+            <p className="text-gray-300">
+              Platform kami menawarkan kombinasi unik antara pembelajaran teknis dan
+              pengembangan soft skill, dilengkapi dengan program persiapan karir yang
+              komprehensif mulai dari pembuatan CV, persiapan interview, hingga strategi job
+              hunting.
             </p>
-            <p className="text-muted-foreground">
-              Dengan ribuan lulusan yang telah berhasil memulai karir mereka, kami terus berkomitmen untuk menyediakan
-              pendidikan berkualitas yang relevan dengan kebutuhan industri modern.
+            <p className="text-gray-300">
+              Dengan ribuan lulusan yang telah berhasil memulai karir mereka, kami terus
+              berkomitmen untuk menyediakan pendidikan berkualitas yang relevan dengan
+              kebutuhan industri modern.
             </p>
           </div>
         </div>
       </main>
 
-      {/* CTA Section */}
-      <section className="bg-primary/5 py-16">
+      {/* CTA */}
+      <section className="bg-primary/10 py-16">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-4">Siap Memulai Perjalanan Karirmu?</h2>
-          <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Bergabunglah dengan ribuan lulusan lainnya yang telah berhasil mempersiapkan karir mereka bersama kami
+          <h2 className="text-3xl font-bold mb-4 text-white">
+            Siap Memulai Perjalanan Karirmu?
+          </h2>
+          <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
+            Bergabunglah dengan ribuan lulusan lainnya yang telah berhasil mempersiapkan
+            karir mereka bersama RMURA LMS
           </p>
           <Link href="/login">
             <Button size="lg">Daftar Sekarang - Gratis</Button>
@@ -147,7 +170,7 @@ export default function AboutPage() {
 
       {/* Footer */}
       <footer className="border-t py-8">
-        <div className="container mx-auto px-4 text-center text-sm text-muted-foreground">
+        <div className="container mx-auto px-4 text-center text-sm text-gray-400">
           <p>&copy; 2025 RMURA LMS. Semua hak dilindungi.</p>
         </div>
       </footer>
